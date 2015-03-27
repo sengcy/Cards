@@ -1,0 +1,22 @@
+This project implements a deck of poker cards. The main requirements are to shuffle and deal one card. This solution is
+designed for future extension. For example, it is possible to create different cards, such as Uno card or dominoes.
+
+A Card class represents a card. In simplest sense, a Card has a descriptor. A descriptor is a string that describes
+the type of card. The descriptor is represented as a CardDescriptor interface which simply provides a method to get the
+descriptor string. Card class implements CardDescriptor interface.
+
+For this project, 2 concrete descriptors are used to describe a poker card: RankDescriptor describes a card's rank
+and SuitDescriptor describes a card's suit.
+
+A PokerCard class is a concrete implementation of Card class, consisting of 2 CardDescriptors: RankDescriptor and
+SuitDescriptor. PokerCardFactory is used for instantiating Card.
+
+A CardCollection class represents a collection of cards. It defines a set of methods for interacting with the collection
+of cards, including Shuffle() and dealOneCard().
+
+A PokerDeckCollection is a concrete implementation of CardCollection. Internally, it represents a stack of PokerCards.
+The PokerDeckCollectionFactory is used for creating a PokerDeckCollection. It creates an initial set of unshuffled
+cards.
+
+Unit tests are also included to test and demo the code. For demonstration, the project can be loaded into IntelliJ IDEA.
+
